@@ -1,0 +1,15 @@
+@import '../../styles/colors.module.scss';
+
+.container{
+    color: $primary-color;
+    margin: 35px;
+}
+.title{
+    font-size: 45px;
+    margin-bottom: 250px;
+    text-align: start;
+}
+.description{
+    font-size: 52px;
+    text-align: end;
+}

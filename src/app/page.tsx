@@ -1,95 +1,63 @@
+"use client"
+
+import { Container, ListGroup, ListGroupItem } from "reactstrap";
+import style from './page.module.scss'
 import Image from "next/image";
-import styles from "./page.module.css";
+import { useState } from "react";
+import Home from "@/components/home";
+import Sobre from "@/components/sobre";
 
-export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
+export default function portfolio() {
+  const [selected, setSelected] = useState<string | null>('home')
+
+  const handleList = (section: string) => {
+    setSelected(prevSelected => (prevSelected === section ? section : section))
+  }
+
+  const renderContent = () => {
+    switch(selected){
+      case 'home':
+        return <Home/>
+      break
+      case 'sobre':
+        return <Sobre/>
+      break
+    }
+  }
+
+
+  return <>
+    <div className={style.container}>
+      <div className={style.profile}>
         <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+          <Image src='/fotoDePerfil.jpg' width={300} height={300} alt="foto de pefil" className={style.imgProfile}/>
         </div>
+
+        <div className={style.information}>
+          <h2 className={style.titleName}>Leonardo Souza Santos</h2>
+          <h3 className={style.profision}>Desenvolvedor Web Full Stack</h3>
+        </div>
+
+        <div className={style.listMessy}>
+          <p className={selected === 'home' ? style.selected : style.p} onClick={() => handleList('home')}>Home</p>
+          <p className={selected === 'sobre' ? style.selected : style.p} onClick={() => handleList('sobre')}>Sobre</p>
+          <p className={selected === 'habilidade' ? style.selected : style.p} onClick={() => handleList('habilidade')}>Habilidades</p>
+          <p className={selected === 'trabalho' ? style.selected : style.p} onClick={() => handleList('trabalho')}>Trabalhos</p>
+          <p className={selected === 'contato' ? style.selected : style.p} onClick={() => handleList('contato')}>Contatos</p>
+          <p className={selected === 'experiencia' ? style.selected : style.p} onClick={() => handleList('experiencia')}>Experiencia</p>
+        </div>
+
+        <div className={style.footer}>
+          <p className={style.titleFooter}>Copyright©2024LeonardoSouza</p>
+          <p className={style.descriptionFooter}>RioGrandeDaSerraSP</p>
+        </div>
+
       </div>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className={style.content}>
+        {renderContent()}
       </div>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+    </div>
+  </>
 }
