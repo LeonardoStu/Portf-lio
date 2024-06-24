@@ -6,10 +6,11 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import Home from "@/components/home";
 import Sobre from "@/components/sobre";
+import Habilidades from "@/components/habilidades";
 
 
 export default function portfolio() {
-  const [selected, setSelected] = useState<string | null>('home')
+  const [selected, setSelected] = useState<string | null>('habilidade')
 
   const handleList = (section: string) => {
     setSelected(prevSelected => (prevSelected === section ? section : section))
@@ -22,6 +23,9 @@ export default function portfolio() {
       break
       case 'sobre':
         return <Sobre/>
+      break
+      case 'habilidade':
+        return <Habilidades/>
       break
     }
   }
