@@ -3,9 +3,10 @@
 import { Container, ListGroup, ListGroupItem } from "reactstrap";
 import style from './page.module.scss'
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Home from "@/components/home";
 import Sobre from "@/components/sobre";
+
 
 export default function portfolio() {
   const [selected, setSelected] = useState<string | null>('home')
