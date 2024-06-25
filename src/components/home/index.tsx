@@ -16,7 +16,7 @@ export default function Home() {
             </div>
 
             <div className={style.description}>
-                <p>Sou um desenvolvedor de site e aplicativos, explore para saber mais!</p>
+                <p>Sou um desenvolvedor de sites e aplicativos, explore para saber mais!</p>
             </div>
         </div>
     </>

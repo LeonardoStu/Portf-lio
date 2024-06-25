@@ -21,40 +21,6 @@ export default function Trabalho() {
                     </div>
                 </Link>
             </div>
-            <div className={style.card}>
-                <Link href='https://onebitflix-rust.vercel.app/'  target='blanck_' className={style.link}>
-                    <Image width={450} height={250} src='/trabalhos/onebitflix.png' alt='Onebitflix' className={style.imgJob}/>
-                    <div>
-                        <h2 className={style.title}>Onebitflix</h2>
-                        <p className={style.description}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur quam consequatur placeat unde est culpa sed velit? Aut, iure laborum eos quas minima, asperiores ex expedita itaque reprehenderit ut consequatur!</p>
-                    </div>
-                </Link>
-            </div>
-            <div className={style.card}>
-                <Link href='https://onebitflix-rust.vercel.app/'  target='blanck_' className={style.link}>
-                    <Image width={450} height={250} src='/trabalhos/onebitflix.png' alt='Onebitflix' className={style.imgJob}/>
-                    <div>
-                        <h2 className={style.title}>Onebitflix</h2>
-                        <p className={style.description}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur quam consequatur placeat unde est culpa sed velit? Aut, iure laborum eos quas minima, asperiores ex expedita itaque reprehenderit ut consequatur!</p>
-                    </div>
-                </Link>
-            </div>
         </div>
-
-        {/* <CardGroup className={`${style.cardGroup} scrollable-container`} data-aos="fade-right">
-            <Card className={style.card}>
-                <Link href='https://onebitflix-rust.vercel.app/' className={style.link}>
-                    <CardImg src='/trabalhos/onebitflix.png' className={style.cardImg}/>
-                    <CardBody>
-                        <CardTitle tag='h2'>
-                            OnebitFlix
-                        </CardTitle>
-                        <CardText>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa nobis iusto libero ratione obcaecati aperiam, recusandae eveniet dignissimos, dolor minima, maiores commodi molestiae sed. Quibusdam expedita excepturi unde accusantium rem.
-                        </CardText>
-                    </CardBody>
-                </Link>
-            </Card>
-        </CardGroup> */}
     </>
 }
