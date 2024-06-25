@@ -42,13 +42,15 @@ export default function portfolio() {
   return <>
     <div className={style.container}>
       <div className={style.profile}>
-        <div>
-          <Image src='/fotoDePerfil.jpg' width={300} height={300} alt="foto de pefil" className={style.imgProfile}/>
-        </div>
+        <div className={style.photoAndName}>
+          <div>
+            <Image src='/fotoDePerfil.jpg' width={300} height={300} alt="foto de pefil" className={style.imgProfile}/>
+          </div>
 
-        <div className={style.information}>
-          <h2 className={style.titleName}>Leonardo Souza Santos</h2>
-          <h3 className={style.profision}>Desenvolvedor Full Stack</h3>
+          <div className={style.information}>
+            <h2 className={style.titleName}>Leonardo Souza Santos</h2>
+            <h3 className={style.profision}>Desenvolvedor Full Stack</h3>
+          </div>
         </div>
 
         <div className={style.listMessy}>
@@ -70,7 +72,6 @@ export default function portfolio() {
       <div className={style.content}>
         {renderContent()}
       </div>
-
     </div>
   </>
 }

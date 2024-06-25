@@ -90,3 +90,56 @@
         font-size: 18px;
     }
 }
+
+@media (max-width: 1000px){
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .profile{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0;
+    }
+    .photoAndName{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .imgProfile{
+        margin-right: 50px;
+        width: 90%;
+        height: 130px;
+    }
+    .information{
+        margin-left: 20px;
+    }
+    .titleName{
+        font-size: 20px;
+    }
+    .profision{
+        font-size: 18px;
+    }
+    .listMessy{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-top: 0;
+        border-top: 1px solid white;
+    }
+    .p{
+        padding: 10px 30px 20px 30px;
+        margin-bottom: 0;
+        &:hover{
+            margin-left: 0px;
+        }
+    }
+    .footer{
+        display: none;
+    }
+}
