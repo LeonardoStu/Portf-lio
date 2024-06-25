@@ -11,4 +11,14 @@
 }
 .description{
     font-size: 52px;
+    
+}
+
+@media (max-width: 1400px){
+    .title{
+        font-size: 30px;
+    }
+    .description{
+        font-size: 35px;
+    }
 }

@@ -7,16 +7,6 @@
     width: 100%;
 }
 
-.profile{
-    background-color: $profile-backGround;
-    padding: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    width: 25%;
-}
 .imgProfile{
     border-radius: 50%;
     margin-bottom: 25px;
@@ -58,6 +48,16 @@
     font-size: 14px;
 }
 
+.profile{
+    background-color: $profile-backGround;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 25%;
+}
 .content{
     display: flex;
     background-color: $content-backGround;
@@ -65,4 +65,28 @@
     align-items: center;
     width: 75%;
 
+}
+
+@media (max-width: 1800px){
+    .titleName{
+        font-size: 20px;
+    }
+    .profision{
+        font-size: 20px;
+    }
+    .imgProfile{
+        width: 200px;
+        height: 200px;
+    }
+}
+@media (max-width: 1300px){
+    .titleName{
+        font-size: 12px;
+    }
+    .profision{
+        font-size: 12px;
+    }
+    .listMessy{
+        font-size: 18px;
+    }
 }

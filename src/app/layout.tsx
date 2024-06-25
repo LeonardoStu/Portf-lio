@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import type { Metadata } from "next";
 import { Noto_Sans } from "next/font/google";
-import "./globals.scss";
+import "../styles/globals.scss";
 
 const noto_Sans = Noto_Sans({ subsets: ["latin"], weight: '400' });
 

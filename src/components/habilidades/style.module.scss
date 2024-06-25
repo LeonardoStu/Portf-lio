@@ -8,3 +8,10 @@
     gap: 50px;
     width: 60%;
 }
+
+@media (max-width: 1200px) {
+    .iconImg{
+        width: 100px;
+        height: 100px;
+    }
+}

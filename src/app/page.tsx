@@ -7,10 +7,12 @@ import { useEffect, useState } from "react";
 import Home from "@/components/home";
 import Sobre from "@/components/sobre";
 import Habilidades from "@/components/habilidades";
+import Trabalho from "@/components/trabalhos";
+import Contato from "@/components/Contatos";
 
 
 export default function portfolio() {
-  const [selected, setSelected] = useState<string | null>('habilidade')
+  const [selected, setSelected] = useState<string | null>('home')
 
   const handleList = (section: string) => {
     setSelected(prevSelected => (prevSelected === section ? section : section))
@@ -27,6 +29,12 @@ export default function portfolio() {
       case 'habilidade':
         return <Habilidades/>
       break
+      case 'trabalho':
+        return <Trabalho/>
+      break
+      case 'contato':
+        return <Contato/>
+      break
     }
   }
 
@@ -40,7 +48,7 @@ export default function portfolio() {
 
         <div className={style.information}>
           <h2 className={style.titleName}>Leonardo Souza Santos</h2>
-          <h3 className={style.profision}>Desenvolvedor Web Full Stack</h3>
+          <h3 className={style.profision}>Desenvolvedor Full Stack</h3>
         </div>
 
         <div className={style.listMessy}>
