@@ -103,6 +103,9 @@
         width: 100%;
         padding: 0;
     }
+    .content{
+        width: 100%;
+    }
     .photoAndName{
         display: flex;
         justify-content: center;
@@ -141,5 +144,17 @@
     }
     .footer{
         display: none;
+    }
+}
+@media (max-width: 500px){
+    .p{
+        padding: 5px 15px 10px 15px;
+        font-size: 16px;
+    }
+    .titleName{
+        font-size: 15px;
+    }
+    .profision{
+        font-size: 14px;
     }
 }

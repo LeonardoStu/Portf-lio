@@ -22,3 +22,17 @@
         font-size: 35px;
     }
 }
+@media (max-width: 1000px){
+    .title{
+        margin-bottom: 100px;
+    }
+}
+@media (max-width: 500px){
+    .title{
+        margin-bottom: 45px;
+        font-size: 25px;
+    }
+    .description{
+        font-size: 30px;
+    }
+}
