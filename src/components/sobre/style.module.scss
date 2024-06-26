@@ -11,3 +11,17 @@
         font-size: 28px;
     }
 }
+@media (max-width: 1000px){
+    .container{
+        font-size: 20px;
+        margin-top: 50px;
+        width: 65%;
+    }
+}
+@media (max-width: 500px){
+    .container{
+        font-size: 18px;
+        margin-top: 50px;
+        width: 90%;
+    }
+}
