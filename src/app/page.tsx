@@ -50,7 +50,7 @@ export default function Portifolio() {
       <div className={style.profile}>
         <div className={style.photoAndName}>
           <div className={style.imgDiv}>
-            <Image src='/fotoDePerfil.jpg' width={300} height={300} alt="foto de pefil" className={style.imgProfile}/>
+            <Image src='/perfil2.jpg' width={300} height={300} alt="foto de pefil" className={style.imgProfile}/>
           </div>
 
           <div className={style.information}>
