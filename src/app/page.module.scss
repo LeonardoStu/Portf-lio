@@ -3,8 +3,6 @@
 .container{
     display: flex;
     justify-content: start;
-    min-height: 100vh;
-    width: 100%;
 }
 
 .imgProfile{
@@ -29,7 +27,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
+    
     &:hover{
         margin-left: 10px;
     }
@@ -64,9 +62,14 @@
     justify-content: center;
     align-items: center;
     width: 75%;
-
+    min-height: 100vh;
 }
 
+// @media (max-width: 1440px){
+//     .content{
+//         align-items: start;
+//     }
+// }
 @media (max-width: 1800px){
     .titleName{
         font-size: 20px;
@@ -105,6 +108,7 @@
     }
     .content{
         width: 100%;
+        min-height: 63vh;
     }
     .photoAndName{
         display: flex;
@@ -146,10 +150,15 @@
         display: none;
     }
 }
+@media(max-width: 800px){
+    .p{
+        font-size: 15px;
+        padding: 5px 25px 15px 25px;
+    }
+}
 @media (max-width: 500px){
     .p{
         padding: 5px 15px 10px 15px;
-        font-size: 16px;
     }
     .titleName{
         font-size: 15px;

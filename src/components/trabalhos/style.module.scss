@@ -1,47 +1,45 @@
 @import '../../styles/colors.module.scss';
 
 .cardGroup{
-    overflow-y: auto;
-    max-height: 100vh;
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 25px;
     justify-content: center;
-    // align-items: center;
+    align-items: start;
+    overflow-y: auto;
+    max-height: 900px;
 }
 .card{
     background-color: $profile-backGround;
-    padding: 10px;
-    width: 30%;
-    height: 30%;
-    margin-bottom: 15px;
-    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    padding: 15px;
     transition: 0.5s;
-    border-radius: 10px;
 
     &:hover{
-        transform: scale(1.02);
+        scale: 1.02;
     }
 }
 .imgJob{
     width: 100%;
     height: auto;
-    text-align: center;
-    margin-bottom: 10px;
-    border-radius: 10px;
+}
+.information{
+    width: 100%;
 }
 .link{
-    text-decoration: none;
     color: $primary-color;
-}
-.title{
-    font-weight: bold;
-    font-size: 25px;
-}
-.description{
-    font-size: 18px;
+    text-decoration: none;
 }
 
+@media (max-width: 1500px){
+    .cardGroup{
+        max-height: 700px;
+    }
+}
 @media (max-width: 1200px){
     .title{
         font-size: 20px;
@@ -51,5 +49,23 @@
     }
     .card{
         width: 40%;
+    }
+}
+
+@media (max-width: 1000px){
+    .title{
+        font-size: 20px;
+    }
+    .description{
+        font-size: 15px;
+    }
+    .card{
+        width: 35%;
+        margin-top: 15px;
+    }
+    .cardGroup{
+        overflow-y: hidden;
+        max-height: 100%;
+        margin-bottom: 15px;
     }
 }
