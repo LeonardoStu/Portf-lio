@@ -9,9 +9,10 @@ import Sobre from "@/components/sobre";
 import Habilidades from "@/components/habilidades";
 import Trabalho from "@/components/trabalhos";
 import Contato from "@/components/Contatos";
+import Experiencia from "@/components/Experiencias";
 
 
-export default function portfolio() {
+export default function Portifolio() {
   const [selected, setSelected] = useState<string | null>('home')
 
   const handleList = (section: string) => {
@@ -35,6 +36,11 @@ export default function portfolio() {
       case 'contato':
         return <Contato/>
       break
+      case 'experiencia':
+        return <Experiencia/>
+      break
+      default:
+        alert('Valor invalido recarregue a página')
     }
   }
 
@@ -43,7 +49,7 @@ export default function portfolio() {
     <div className={style.container}>
       <div className={style.profile}>
         <div className={style.photoAndName}>
-          <div>
+          <div className={style.imgDiv}>
             <Image src='/fotoDePerfil.jpg' width={300} height={300} alt="foto de pefil" className={style.imgProfile}/>
           </div>
 

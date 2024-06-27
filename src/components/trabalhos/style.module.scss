@@ -5,8 +5,9 @@
     flex-wrap: wrap;
     gap: 25px;
     justify-content: center;
-    align-items: start;
+    align-items: center;
     overflow-y: auto;
+    // min-height: 100vh;
     max-height: 900px;
 }
 .card{
@@ -15,12 +16,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 40%;
+    width: 500px;
     padding: 15px;
     transition: 0.5s;
 
     &:hover{
-        scale: 1.02;
+        background-color: #004280;
     }
 }
 .imgJob{
